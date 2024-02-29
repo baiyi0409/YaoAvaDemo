@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>YaoAvaDemo</id>
+    <version>1.0.0</version>
+    <authors>YaoAvaDemo</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Avalonia" version="11.0.6" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.Desktop" version="11.0.6" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.Diagnostics" version="11.0.6" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.Fonts.Inter" version="11.0.6" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.ReactiveUI" version="11.0.6" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.Themes.Fluent" version="11.0.6" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.Xaml.Behaviors" version="11.0.6" exclude="Build,Analyzers" />
+        <dependency id="Prism.DryIoc.Avalonia" version="8.1.97.11000" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Develop\Project\YaoAvaDemo\YaoAvaDemo\bin\Debug\net6.0\YaoAvaDemo.runtimeconfig.json" target="lib\net6.0\YaoAvaDemo.runtimeconfig.json" />
+    <file src="D:\Develop\Project\YaoAvaDemo\YaoAvaDemo\bin\Debug\net6.0\YaoAvaDemo.dll" target="lib\net6.0\YaoAvaDemo.dll" />
+  </files>
+</package>

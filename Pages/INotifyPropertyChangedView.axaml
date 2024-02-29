@@ -1,0 +1,29 @@
+<UserControl
+    x:Class="YaoAvaDemo.INotifyPropertyChangedView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:YaoAvaDemo.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:DataType="vm:INotifyPropertyChangedViewModel"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel Margin="20">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Text="Your Name:" />
+                <TextBox
+                    Name="name"
+                    Width="120"
+                    Margin="10,0,0,0" />
+            </StackPanel>
+            <Button
+                Margin="0,10,0,0"
+                Command="{Binding ShowNameCommand}"
+                CommandParameter="{Binding #name.Text}"
+                Content="Show" />
+            <TextBlock Margin="0,20,0,0" Text="{Binding Name}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

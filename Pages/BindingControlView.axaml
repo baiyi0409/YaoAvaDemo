@@ -1,0 +1,37 @@
+<UserControl
+    x:Class="YaoAvaDemo.BindingControlView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel>
+        <!--  绑定控件属性  -->
+        <TextBox Name="other" />
+        <TextBlock Text="{Binding #other.Text}" />
+        <!--  绑定到祖先元素  -->
+        <Border Tag="Hello World!">
+            <TextBlock Text="{Binding $parent.Tag}" />
+        </Border>
+        <!--  绑定到指定级别的祖先元素  -->
+        <Border Tag="Hello World!">
+            <Border>
+                <TextBlock Text="{Binding $parent[1].Tag}" />
+            </Border>
+        </Border>
+        <Border Tag="Hello World!">
+            <Decorator>
+                <TextBlock Text="{Binding $parent[Border].Tag}" />
+            </Decorator>
+        </Border>
+        <Border Tag="Hello World!">
+            <Border>
+                <Decorator>
+                    <TextBlock Text="{Binding $parent[Border;1].Tag}" />
+                </Decorator>
+            </Border>
+        </Border>
+    </StackPanel>
+</UserControl>

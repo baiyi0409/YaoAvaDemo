@@ -1,0 +1,44 @@
+<UserControl
+    x:Class="YaoAvaDemo.ControlThemesView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <!--  使所有的按钮都变成圆形  -->
+        <!--  ControlTheme x:Key="{x:Type Button}" TargetType="Button"  -->
+        <ControlTheme x:Key="EllipseButton" TargetType="Button">
+            <Setter Property="Background" Value="Blue" />
+            <Setter Property="Foreground" Value="Yellow" />
+            <Setter Property="Padding" Value="8" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Panel>
+                        <Ellipse
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Fill="{TemplateBinding Background}" />
+                        <ContentPresenter
+                            x:Name="PART_ContentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            Content="{TemplateBinding Content}" />
+                    </Panel>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:pointerover">
+                <Setter Property="Background" Value="Red" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+        </ControlTheme>
+    </UserControl.Resources>
+    <Grid>
+        <Button
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Hello World"
+            Theme="{StaticResource EllipseButton}" />
+    </Grid>
+</UserControl>

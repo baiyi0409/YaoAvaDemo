@@ -1,0 +1,21 @@
+<prism:PrismApplication
+    x:Class="YaoAvaDemo.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YaoAvaDemo"
+    xmlns:prism="http://prismlibrary.com/"
+    RequestedThemeVariant="Default">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+
+    <Application.Resources>
+        <Color x:Key="MaskColor">#8B8989</Color>
+    </Application.Resources>
+</prism:PrismApplication>
